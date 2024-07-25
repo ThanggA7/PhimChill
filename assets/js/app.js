@@ -1,4 +1,4 @@
-const API = "https://phimapi.com/phim/cong-anh-ma-chay";
+const API = "https://phimapi.com/phim/lan-thu-hai-gap-go";
 const videoPlayer = document.getElementById("videoPlayer");
 
 function Start() {
@@ -63,10 +63,12 @@ function Renderinfo(params) {
   var desc = document.querySelector(".film__desc");
   var name = document.querySelector(".film__name");
   var chap = document.querySelector(".chap__desc");
+  var title = document.querySelector("title");
   name.innerHTML = params.movie.name;
+  title.innerHTML = params.movie.name;
   actor.innerHTML = params.movie.actor;
   time.innerHTML = params.movie.time;
   desc.innerHTML = params.movie.content;
   chap.innerHTML = params.episodes[0].server_data.length;
-  console.log(params.episodes[0].server_data.length);
+  console.log(params.movie);
 }
