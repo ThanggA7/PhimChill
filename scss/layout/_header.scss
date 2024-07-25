@@ -1,0 +1,67 @@
+@use "../abstracts";
+%flexItemsCenter {
+  display: flex;
+  align-items: center;
+}
+.header {
+  padding: 10px 0;
+  background-color: #121212;
+}
+.top-bar {
+  @extend %flexItemsCenter;
+}
+
+.header__navbar {
+  margin-left: auto;
+  @extend %flexItemsCenter;
+}
+
+.navbar__list {
+  padding: 0 16px;
+  @include abstracts.breakpoint(lg) {
+    padding: 0 8px;
+  }
+}
+
+.gg-search {
+  color: white;
+}
+
+.navbar__link {
+  @include abstracts.breakpoint(lg) {
+    display: none;
+  }
+  @extend %flexItemsCenter;
+  color: white;
+  @include abstracts.breakpoint(lg) {
+    font-size: 1.5rem;
+  }
+
+  &:hover {
+    color: #ff9601;
+  }
+}
+
+.header__search {
+  padding: 10px;
+  @extend %flexItemsCenter;
+  gap: 20px;
+  height: 30px;
+  border: 1px solid white;
+  input {
+    font-weight: 500;
+    font-style: 1.5rem;
+    color: white;
+  }
+
+  @include abstracts.breakpoint(lg) {
+    display: none;
+  }
+}
+.card__film {
+  width: 100%;
+  height: 300px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  margin-top: 20px;
+}

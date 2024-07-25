@@ -1,0 +1,14 @@
+{
+  "name": "online-shoping-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "npx sass scss:assets/css -w",
+    "minify": "npx sass scss:assets/css -s compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

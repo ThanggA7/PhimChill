@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+  background-color: #1a1a1a;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+.icon {
+  filter: var(--icon--color);
+}
+button,
+input,
+textarea {
+  font-family: inherit;
+  color: inherit;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}

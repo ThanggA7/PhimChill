@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ngôi Trường Xác Sống - Tập 1</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <script src="../assets/js/script.js"></script>
+  </head>
+  <body>
+    <header id="header" class="header"></header>
+    <script>
+      load("header", "../templates/header.html");
+    </script>
+    <main class="film_stream">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 col-12">
+            <video id="videoPlayer" controls></video>
+          </div>
+          <div class="col-lg-3 col-12">
+            <div class="list__chap">
+              <div class="list__chap--info">
+                <p class="list__chap--title">Cõng anh mà chạy</p>
+                <p class="list__chap--desc">
+                  Chọn tập từ 1 đến <span class="chap__desc"> 16</span>
+                </p>
+              </div>
+              <ul class="list" id="list"></ul>
+            </div>
+          </div>
+        </div>
+        <div class="film__info">
+          <div class="film__title">
+            <h1 class="film__name"></h1>
+          </div>
+
+          <div class="film__info--desc">
+            <p class="info__title">
+              Diễn viên:
+              <span class="film__actor"></span>
+            </p>
+            <p class="info__title">
+              Thời gian: <span class="film__time"></span>
+            </p>
+            <p class="info__title">
+              Nội dung:
+              <span class="film__desc"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer id="footer" class="footer"></footer>
+    <script>
+      load("footer", "../templates/footer.html");
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>

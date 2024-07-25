@@ -1,0 +1,28 @@
+@use "../abstracts";
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  @include abstracts.breakpoint(lg) {
+    gap: 10px;
+  }
+}
+
+.logo__img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  @include abstracts.breakpoint(lg) {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.header__title {
+  // font-family: "Just Another Hand", cursive;
+  color: white;
+  font-size: 3.5rem;
+  @include abstracts.breakpoint(lg) {
+    font-size: 3rem;
+  }
+}
