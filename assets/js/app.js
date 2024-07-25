@@ -64,6 +64,9 @@ function Renderinfo(params) {
   var name = document.querySelector(".film__name");
   var chap = document.querySelector(".chap__desc");
   var title = document.querySelector("title");
+  var name_title = document.querySelector(".list__chap--title");
+
+  name_title.innerHTML = params.movie.name;
   name.innerHTML = params.movie.name;
   title.innerHTML = params.movie.name;
   actor.innerHTML = params.movie.actor;
