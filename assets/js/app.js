@@ -7,7 +7,7 @@ function Start() {
 
     Renderinfo(data);
   });
-
+  HandelChap();
   RenderChap();
 }
 
@@ -27,12 +27,11 @@ function RenderChap() {
     var html = data.episodes[0].server_data.map(function (item) {
       var chap = item.name.split("Tập")[1];
       return `
-      <li>
-     <a href="#" onclick="playEpisode('${item.link_m3u8}')">${chap}</a>
+      <li class="film__list--chap">
+     <a  href="#" onclick="playEpisode('${item.link_m3u8}')">${chap}</a>
       </li>
     `;
     });
-
     chap.innerHTML = html.join("");
   });
 }
@@ -71,4 +70,9 @@ function Renderinfo(params) {
   time.innerHTML = params.movie.time;
   desc.innerHTML = params.movie.content;
   chap.innerHTML = params.episodes[0].server_data.length;
+}
+
+function HandelChap() {
+  var chapters = document.querySelector(".film__list--chap");
+  console.log(chapters);
 }

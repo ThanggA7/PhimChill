@@ -54,7 +54,7 @@ const Country = {
 
 function Start() {
   GetData(function (data) {
-    GetFilmDetail(data);
+    // GetFilmDetail(data);
   });
   for (index in Country) {
     GetData(function (data) {
@@ -73,26 +73,26 @@ function GetData(callback) {
     .then(callback);
 }
 
-function GetFilmDetail(page) {
-  var totalpage = page.data.params.pagination["totalPages"];
-  var listpage = document.querySelector(".list__page");
-  for (let i = 1; i <= totalpage; i++) {
-    var page__item = document.createElement("a");
-    page__item.classList.add("page__item");
-    page__item.innerHTML = i;
-    listpage.appendChild(page__item);
-    page__item.onclick = function () {
-      var API_PAGE = API_URL + i + "&limit=10";
-      fetch(API_PAGE)
-        .then(function (response) {
-          return response.json();
-        })
-        .then(function (list) {
-          RenderFilmPoster(list);
-        });
-    };
-  }
-}
+// function GetFilmDetail(page) {
+//   var totalpage = page.data.params.pagination["totalPages"];
+//   var listpage = document.querySelector(".list__page");
+//   for (let i = 1; i <= totalpage; i++) {
+//     var page__item = document.createElement("a");
+//     page__item.classList.add("page__item");
+//     page__item.innerHTML = i;
+//     listpage.appendChild(page__item);
+//     page__item.onclick = function () {
+//       var API_PAGE = API_URL + i + "&limit=10";
+//       fetch(API_PAGE)
+//         .then(function (response) {
+//           return response.json();
+//         })
+//         .then(function (list) {
+//           RenderFilmPoster(list);
+//         });
+//     };
+//   }
+// }
 function RenderFilmPoster(films) {
   var list__film = document.querySelectorAll(".card__film");
   var RenderFilm = films.map(function (item) {
