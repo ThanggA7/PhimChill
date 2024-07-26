@@ -22,6 +22,11 @@ function RenderBanner(params) {
 
         <div class="banner" >
                     <div class="banner__info">
+                <img
+                src="${item.poster_url}"
+                alt=""
+                class="banner__poster"
+              />      
               <p class="banner__info--title">${item.name}</p>
 
               <div class="banner__info--desc">

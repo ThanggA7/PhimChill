@@ -95,7 +95,7 @@
 }
 .wrapper {
   display: flex;
-  animation: slide 16s infinite;
+  animation: slide 15s infinite;
 }
 
 .banner__film {
@@ -170,5 +170,14 @@
     width: 70px;
     background-color: #ff9601;
     border-radius: 5px;
+  }
+
+  .banner__poster {
+    width: 200px;
+    height: 320px;
+    object-fit: cover;
+    @include abstracts.breakpoint(lg) {
+      display: none;
+    }
   }
 }
