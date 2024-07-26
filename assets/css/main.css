@@ -1501,6 +1501,11 @@ textarea {
   font-size: 3.5rem;
   font-weight: 800;
 }
+@media (max-width: 991.98px) {
+  .banner__info--title {
+    font-size: 1.75rem;
+  }
+}
 .banner__info--act {
   color: white;
   font-size: 1.8rem;

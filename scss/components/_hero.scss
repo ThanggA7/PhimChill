@@ -154,6 +154,9 @@
     text-transform: uppercase;
     font-size: 3.5rem;
     font-weight: 800;
+    @include abstracts.breakpoint(lg) {
+      font-size: 1.75rem;
+    }
   }
   &--act {
     color: white;
