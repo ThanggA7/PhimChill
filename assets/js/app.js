@@ -3,9 +3,7 @@ const videoPlayer = document.getElementById("videoPlayer");
 
 function Start() {
   GetData(function (data) {
-    data.episodes[0].server_data.map(function (item) {
-      playEpisode(item.link_m3u8);
-    });
+    playEpisode(data.episodes[0].server_data[0].link_m3u8);
 
     Renderinfo(data);
   });
@@ -73,5 +71,4 @@ function Renderinfo(params) {
   time.innerHTML = params.movie.time;
   desc.innerHTML = params.movie.content;
   chap.innerHTML = params.episodes[0].server_data.length;
-  console.log(params.movie);
 }

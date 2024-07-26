@@ -1460,6 +1460,11 @@ video {
   font-weight: 600;
   color: #d3d8e1;
 }
+@media (max-width: 991.98px) {
+  .list__chap--title {
+    display: none;
+  }
+}
 
 .list__chap--desc {
   margin-top: 10px;

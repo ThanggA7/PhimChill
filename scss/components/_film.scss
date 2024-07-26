@@ -1,3 +1,4 @@
+@use "../abstracts";
 .list {
   margin-top: 20px;
   display: flex;
@@ -34,6 +35,9 @@ video {
   font-size: 2rem;
   font-weight: 600;
   color: #d3d8e1;
+  @include abstracts.breakpoint(lg) {
+    display: none;
+  }
 }
 
 .list__chap--desc {
